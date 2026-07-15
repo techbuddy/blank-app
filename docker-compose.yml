@@ -1,0 +1,14 @@
+services:
+  safetypulse:
+    build: .
+    container_name: safetypulse
+    ports:
+      - "8501:8501"
+    volumes:
+      - safetypulse_data:/app/data
+    environment:
+      - SAFETYPULSE_DB_PATH=/app/data/safetypulse.db
+    restart: unless-stopped
+
+volumes:
+  safetypulse_data:
