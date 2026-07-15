@@ -1,0 +1,7 @@
+services:
+  safetypulse:
+    build: .
+    container_name: safetypulse
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
